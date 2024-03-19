@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+static int count=0;
+class A
+{
+public:
+    A()
+    {
+        count++;
+        cout << "Constructor A " << count << endl;
+    }
+    ~A()
+    {
+        cout << "Destructor A " << count << endl;
+    }
+
+private:
+};
+class B
+{
+public:
+    A test()
+    {
+        //count ++;
+        return a;
+    }
+    B()
+    {
+        cout << "Constructor B " << endl;
+    }
+    ~B()
+    {
+        cout << "Destructor B" << endl;
+    }
+    private:
+    A a;
+};
+// A B::a;
+//int A::count = 0;
+int main()
+{
+     B obj1;
+     A obj2 = obj1.test();// shift + alt +F
+    // B obj3 = obj1;
+    return 0;
+}
