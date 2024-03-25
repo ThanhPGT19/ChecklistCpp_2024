@@ -6,8 +6,8 @@
     {
     private:
         T *pt;
-        static int size;
-        static int capacity;
+        int size;
+        int capacity;
 
     public:
         vector();

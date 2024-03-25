@@ -1,6 +1,6 @@
 #include "vector.h"
-template <>int vector<int>::size = 0;
-template <>int vector<int>::capacity = 0;
+// template <>int vector<int>::size = 0;
+// template <>int vector<int>::capacity = 0;
 template <class T>
 vector<T>::vector(){
             this->pt = new T;
@@ -56,13 +56,14 @@ void vector<T>::pop_back(){
 }
 template <class T>
 vector<T>& vector<T>:: operator=(vector<T> &rhs){
-    rhs.capacity = this->capacity;
-    rhs.size =this->size;
-    rhs.pt =new T[capacity];
+    if(this->pt!=NULL)this->pt=NULL;
+    this->capacity = rhs.capacity;
+    this->size = rhs.size;
+    this->pt = new T[this->capacity];
     for(int i=0; i<this->size;i++){
-        rhs.pt[i]=this->pt[i];
+        this->pt[i]=rhs.pt[i];
     }
-    return rhs;
+    return *this;
     
 };
 template <class T>
