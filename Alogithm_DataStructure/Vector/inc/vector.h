@@ -27,6 +27,10 @@
         void erase(int pos);
         /* Free all the vector */
         void clear();
+        ~vector(){
+            std:: cout<< "Delete ptr destructor"<<std::endl;
+            delete pt;
+        }
     };
 #include "vector.cpp"
 #endif
