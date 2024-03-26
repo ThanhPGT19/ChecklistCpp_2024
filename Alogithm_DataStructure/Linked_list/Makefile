@@ -4,7 +4,7 @@ OBJ := ./obj/
 BIN := ./bin/
 C_FLAG := -I$(INC)
 FILE := $(INC)*.cpp $(INC)*.h
-g++ := CC
+CC := g++
 
 run : $(OBJ)main.o
 	$(CC) -o $(BIN)exam $< $(C_FLAG)
