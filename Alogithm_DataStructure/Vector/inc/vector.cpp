@@ -100,5 +100,5 @@ void vector<T>:: erase(int pos){
 /* Free all the vector */
 template <class T>
 void vector<T>:: clear(){
-    delete this->pt;
+    size=0;
 };

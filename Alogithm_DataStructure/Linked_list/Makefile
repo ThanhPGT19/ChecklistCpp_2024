@@ -9,6 +9,8 @@ CC := g++
 run : $(OBJ)main.o
 	$(CC) -o $(BIN)exam $< $(C_FLAG)
 
+run1:
+	$(BIN)*.exe
 $(OBJ)%.o : $(SRC)%.cpp $(FILE)
 	$(CC) -c $< -o $@ $(C_FLAG)
 
