@@ -3,6 +3,7 @@
 // template <>int vector<int>::capacity = 0;
 template <class T>
 vector<T>::vector(){
+            this->size=0;
             this->pt = new T;
             std::cout << "Hello constructor Vector" << std::endl;
             capacity = 1;
@@ -28,13 +29,13 @@ void vector<T>::printvector()
 template <class T>
 void vector<T>::push_back(T x)
 {
-    if (pt != NULL)
+    if (size <= capacity)
     {
         pt[this->size] = x;
         // std:: cout << "push thanh cong"<<std::endl;
         size++;
     }
-    if (size > capacity)
+    else
     {
         int temp = this->size;
         size = 0;
@@ -47,7 +48,8 @@ void vector<T>::push_back(T x)
                 pt[this->size] = ptr[this->size];
                 this->size++;
         }
-        delete ptr; 
+        //delete ptr; 
+        //ptr =NULL;
     }
 }
 template <class T>

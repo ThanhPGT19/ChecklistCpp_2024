@@ -10,7 +10,7 @@ run : $(OBJ)main.o
 	$(CC) -o $(BIN)exam $< $(C_FLAG)
 
 run1:
-	$(BIN)*.exe
+	$(BIN)exam
 $(OBJ)%.o : $(SRC)%.cpp $(FILE)
 	$(CC) -c $< -o $@ $(C_FLAG)
 
