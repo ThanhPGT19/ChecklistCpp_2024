@@ -8,14 +8,14 @@ int main(){
     a.push_back(6);
     a.push_back(8);
     a.insert(1,90);
-    std::cout<<"__________"<<std::endl;
+    std::cout<<"Them Phan tu vao vector a______"<<std::endl;
     a.printvector();
-    std::cout<<"__________"<<std::endl;
+    std::cout<<"Them Phan tu vao vector b_______"<<std::endl;
     b.printvector();
-    std::cout<<"__________"<<std::endl;
+    std::cout<<"Gan b = a___in ra a"<<std::endl;
     b=a;
     a.printvector();
-    std::cout<<"__________"<<std::endl;
+    std::cout<<"In ra b________"<<std::endl;
     b.printvector();
 
     //a.printvector();
