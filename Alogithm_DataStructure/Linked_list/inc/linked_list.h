@@ -7,6 +7,7 @@ class Node
 private:
     T data;
     Node *pt_next;
+    int lenght;
 
 public:
     Node(T val)

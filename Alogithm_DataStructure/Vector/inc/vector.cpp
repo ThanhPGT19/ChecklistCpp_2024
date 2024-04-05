@@ -57,7 +57,7 @@ void vector<T>::pop_back(){
     this->size--;
 }
 template <class T>
-vector<T>& vector<T>:: operator=(vector<T> &rhs){
+vector<T> &vector<T>:: operator=(vector<T> &rhs){
     if(this->pt!=NULL)this->pt=NULL;
     this->capacity = rhs.capacity;
     this->size = rhs.size;

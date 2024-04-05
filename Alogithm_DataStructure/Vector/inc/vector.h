@@ -29,7 +29,7 @@
         void clear();
         ~vector(){
             std:: cout<< "Delete ptr destructor"<<std::endl;
-            delete pt;
+            //delete pt;
         }
     };
 #include "vector.cpp"
