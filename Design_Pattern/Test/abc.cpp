@@ -247,13 +247,7 @@ int main()
     Single_Management::Create_OBJ_Manage_Publisher().add_Observer(PT_FB);
     Single_Management::Create_OBJ_Manage_Publisher().add_Observer(ST_YTB);
     Single_Management::Create_OBJ_Manage_Publisher().add_Observer(J97_FB);
-    //Send Notifier for Subscriber YTB
-    Single_Management::Create_OBJ_Manage_Publisher().Send_notifier("YTB","Update Tinh Nang YTB!!");
-    //Send Notifier for Subscriber FB
-    Single_Management::Create_OBJ_Manage_Publisher().Send_notifier("FB","FB has news Feature!!");
-    //Ubsubscribe user PT of Publisher FaceBook
-    Single_Management::Create_OBJ_Manage_Publisher().Delete_Obsever("FB","PhanThanh");
-    //Resend Notifier
-    Single_Management::Create_OBJ_Manage_Publisher().Send_notifier("FB","New Feature Datting is Update!");
+    //Send Notifier
+    Single_Management::Create_OBJ_Manage_Publisher().Send_notifier("YTB","Update Tinh Nang FB!!");
     return 0;
 }
