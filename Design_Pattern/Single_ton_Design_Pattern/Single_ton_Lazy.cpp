@@ -25,3 +25,12 @@ int main(){
    // obj.func();
 
 }
+
+/*
+Tại sao khi sử dụng biến static trong hàm thì khi gọi lại hàm đó nó ko khởi tạo 1 biến mới. mà dùng lại biến static đã khởi tạo ban đầu ????
+
+- Vì static variable khởi tạo trước khi vào hàm main(). Khởi tạo trong compile time => khi chạy chương trình nó đã allocate biến đó trong bộ nhớ. 
+=> Khi gọi hàm (trong runtime) thì đơn giản là nó sẽ lục biến đó trong bộ nhớ và sử dụng. chứ ko tạo ra biến khác. vì gọi hàm là ở runtime mà 
+static variable đã được khởi tạo ngay khi build chương trình.
+
+*/
